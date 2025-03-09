@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relaxing Puzzle</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="top-bar">
+            <div class="currency">
+                <i class="fas fa-yin-yang"></i>
+                <span id="zenCoins">0</span> Moedas Zen
+                <span class="premium-badge" style="display: none;">ZEN MASTER</span>
+            </div>
+            <div class="menu-controls">
+                <div class="buttons">
+                    <button id="shopButton" class="menu-button">
+                        <i class="fas fa-store"></i>
+                        Loja Zen
+                    </button>
+                    <button id="achievementsButton" class="menu-button">
+                        <i class="fas fa-trophy"></i>
+                        Conquistas
+                    </button>
+                    <button id="rankingButton" class="menu-button">
+                        <i class="fas fa-crown"></i>
+                        Ranking
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <h1 class="game-title">Relaxing Puzzle</h1>
+        
+        <div class="score-container">
+            Pontuação: <span id="score">0</span>
+            <div class="sound-controls">
+                <button class="menu-button sound-button">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+                <input type="range" class="volume-slider" min="0" max="100" value="30">
+            </div>
+        </div>
+        
+        <div class="powerups-container">
+            <button class="powerup-button" data-powerup="meditation">
+                <i class="fas fa-om"></i>
+                Meditação
+                <span class="powerup-count">0</span>
+            </button>
+            <button class="powerup-button" data-powerup="harmony">
+                <i class="fas fa-balance-scale"></i>
+                Harmonia
+                <span class="powerup-count">0</span>
+            </button>
+            <button class="powerup-button" data-powerup="serenity">
+                <i class="fas fa-eye"></i>
+                Serenidade
+                <span class="powerup-count">0</span>
+            </button>
+            <button class="powerup-button" data-powerup="explosion">
+                <i class="fas fa-bomb"></i>
+                Explosão Zen
+                <span class="powerup-count">0</span>
+            </button>
+        </div>
+        
+        <div class="game-area">
+            <div class="grid"></div>
+            <div class="controls">
+                <button id="startGame" class="menu-button">Novo Jogo</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modais -->
+    <div class="modal" id="shopModal">
+        <div class="modal-content shop-content">
+            <button class="close-button">&times;</button>
+            <h2>Loja Relaxing</h2>
+            
+            <div class="shop-tabs">
+                <button class="shop-tab active" data-tab="themes">Temas</button>
+                <button class="shop-tab" data-tab="powerups">Power-ups</button>
+                <button class="shop-tab" data-tab="premium">Premium</button>
+            </div>
+            
+            <div class="shop-sections">
+                <div class="shop-section active" id="themes">
+                    <div class="theme-item">
+                        <h3>Tema Clássico</h3>
+                        <p>O tema original do Zen Match</p>
+                        <button class="theme-button active">Selecionado</button>
+                    </div>
+                    <div class="theme-item locked">
+                        <h3>Tema Noturno</h3>
+                        <p>Um tema escuro e relaxante</p>
+                        <button class="theme-button">500 Moedas Zen</button>
+                    </div>
+                    <div class="theme-item locked">
+                        <h3>Pôr do Sol</h3>
+                        <p>Gradientes quentes e acolhedores</p>
+                        <button class="theme-button">550 Moedas Zen</button>
+                    </div>
+                    <div class="theme-item locked">
+                        <h3>Jardim Zen</h3>
+                        <p>Inspirado nos jardins japoneses tradicionais</p>
+                        <button class="theme-button">600 Moedas Zen</button>
+                    </div>
+                    <div class="theme-item locked">
+                        <h3>Oceano Profundo</h3>
+                        <p>Tons relaxantes de azul e aqua</p>
+                        <button class="theme-button">600 Moedas Zen</button>
+                    </div>
+                    <div class="theme-item locked">
+                        <h3>Montanha Nevada</h3>
+                        <p>Tema minimalista em tons de branco</p>
+                        <button class="theme-button">600 Moedas Zen</button>
+                    </div>
+                    <div class="theme-item locked">
+                        <h3>Floresta Mística</h3>
+                        <p>Verdes e dourados da natureza</p>
+                        <button class="theme-button">650 Moedas Zen</button>
+                    </div>
+                    <div class="theme-item locked">
+                        <h3>Sakura</h3>
+                        <p>Tons suaves de rosa e branco</p>
+                        <button class="theme-button">650 Moedas Zen</button>
+                    </div>
+                    <div class="theme-item locked">
+                        <h3>Aurora Boreal</h3>
+                        <p>Cores vibrantes inspiradas nas auroras</p>
+                        <button class="theme-button">700 Moedas Zen</button>
+                    </div>
+                    <div class="theme-item locked">
+                        <h3>Lua Cheia</h3>
+                        <p>Atmosfera noturna e misteriosa</p>
+                        <button class="theme-button">700 Moedas Zen</button>
+                    </div>
+                    <div class="theme-item locked">
+                        <h3>Cristal</h3>
+                        <p>Visual elegante e translúcido</p>
+                        <button class="theme-button">750 Moedas Zen</button>
+                    </div>
+                    <div class="theme-item locked">
+                        <h3>Nebulosa</h3>
+                        <p>Inspirado nas cores do cosmos</p>
+                        <button class="theme-button">800 Moedas Zen</button>
+                    </div>
+                </div>
+                
+                <div class="shop-section" id="powerups">
+                    <div class="powerup-item">
+                        <i class="fas fa-om"></i>
+                        <h3>Meditação</h3>
+                        <p>Remove uma peça do tabuleiro</p>
+                        <button class="powerup-buy-button">100 Moedas Zen</button>
+                    </div>
+                    <div class="powerup-item">
+                        <i class="fas fa-balance-scale"></i>
+                        <h3>Harmonia</h3>
+                        <p>Embaralha o tabuleiro</p>
+                        <button class="powerup-buy-button">150 Moedas Zen</button>
+                    </div>
+                    <div class="powerup-item">
+                        <i class="fas fa-eye"></i>
+                        <h3>Serenidade</h3>
+                        <p>Mostra possíveis combinações</p>
+                        <button class="powerup-buy-button">200 Moedas Zen</button>
+                    </div>
+                    <div class="powerup-item">
+                        <i class="fas fa-bomb"></i>
+                        <h3>Explosão Zen</h3>
+                        <p>Explode todas as peças e converte em pontos</p>
+                        <button class="powerup-buy-button">300 Moedas Zen</button>
+                    </div>
+                </div>
+                
+                <div class="shop-section" id="premium">
+                    <div class="premium-section">
+                        <div class="premium-item">
+                            <h3>Zen Premium</h3>
+                            <div class="price">R$9,90<small>/mês</small></div>
+                            <ul class="premium-benefits">
+                                <li><i class="fas fa-check"></i> Experiência sem anúncios</li>
+                                <li><i class="fas fa-check"></i> Tema noturno desbloqueado</li>
+                                <li><i class="fas fa-check"></i> Bônus diário +50%</li>
+                                <li><i class="fas fa-check"></i> Suporte prioritário</li>
+                            </ul>
+                            <button class="premium-button">Tornar-se Premium</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="achievementsModal">
+        <div class="modal-content">
+            <button class="close-button">&times;</button>
+            <h2>Conquistas</h2>
+            <div class="achievements-container">
+                <div class="achievement">
+                    <i class="fas fa-star"></i>
+                    <h3>Iniciante Zen</h3>
+                    <p>Complete 10 combinações</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div class="achievement">
+                    <i class="fas fa-crown"></i>
+                    <h3>Mestre das Combinações</h3>
+                    <p>Complete uma combinação de 5 peças</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <h2>Recompensas Diárias</h2>
+            <div class="daily-rewards-container">
+                <div class="daily-reward">
+                    <div class="day">Dia 1</div>
+                    <i class="fas fa-yin-yang"></i>
+                    <span>100 Moedas Zen</span>
+                </div>
+                <div class="daily-reward locked">
+                    <div class="day">Dia 2</div>
+                    <i class="fas fa-om"></i>
+                    <span>1 Meditação</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="copyright">
+        <p>&copy; 2024 Relaxing Puzzle by Delsinho. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="game.js"></script>
+</body>
+</html>
