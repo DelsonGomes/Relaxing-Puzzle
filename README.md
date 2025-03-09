@@ -1,33 +1,52 @@
-# Relaxing Puzzle
+# 🎮 Relaxing Puzzle
 
-Um jogo de puzzle relaxante estilo match-3 com temas zen e música lo-fi.
+Um jogo de puzzle relaxante com elementos zen, desenvolvido em HTML, CSS e JavaScript.
 
-## Características
+## 🌟 Características
 
-- Interface limpa e moderna
-- Música lo-fi relaxante
-- Sistema de powerups
-- Temas personalizáveis
-- Sistema de conquistas
-- Modo Zen Master (premium)
+- 🎯 Gameplay intuitivo e relaxante
+- 🎨 12 temas visuais diferentes
+- 💫 4 power-ups únicos:
+  - 🧘 Meditação: Remove uma peça
+  - ⚖️ Harmonia: Embaralha o tabuleiro
+  - 👁️ Serenidade: Mostra combinações possíveis
+  - 💥 Explosão Zen: Converte peças em pontos
+- 🏆 Sistema de conquistas
+- 📈 Ranking global
+- 🎁 Recompensas diárias
+- 🌙 Modo noturno
+- 🎵 Controles de som
 
-## Como Jogar
+## 🎮 Como Jogar
 
-1. Clique em uma peça para selecioná-la
-2. Clique em uma peça adjacente para trocar
-3. Forme combinações de 3 ou mais peças iguais
-4. Use powerups para ajuda extra
-5. Colete moedas Zen para desbloquear temas e recursos
+1. Combine peças iguais para marcar pontos
+2. Colete moedas zen para desbloquear novos temas e power-ups
+3. Complete desafios diários para ganhar recompensas
+4. Alcance o topo do ranking
 
-## Tecnologias Utilizadas
+## 💎 Versão Premium
+
+A versão Zen Premium inclui:
+- ❌ Experiência sem anúncios
+- 🌙 Tema noturno desbloqueado
+- 💰 Bônus diário +50%
+- 🎯 Suporte prioritário
+
+## 🛠️ Tecnologias Utilizadas
 
 - HTML5
 - CSS3
-- JavaScript (ES6+)
-- Font Awesome para ícones
+- JavaScript
+- Font Awesome
 - Google Fonts
 
-## Créditos
+## 📝 Licença
 
-- Música: "Chill lofi inspired" por omfgdude (CC0)
-- Desenvolvido por Delsinho 
+Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
+
+## 👤 Autor
+
+Desenvolvido por Delsinho
+
+---
+© 2024 Relaxing Puzzle. Todos os direitos reservados. 
